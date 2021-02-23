@@ -51,26 +51,25 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Welcome user: {}, , I am cutest bot: Cutiepii! 
+Oi Baka! {} My name isi Levi Ackerman!
 
 I am an Anime themed advance group management bot with a lot of Special Features.
 
-You can also make my sister. [Cutiepii Repo](https://github.com/Rajkumar-27/CutiepiiRobot)
-
-Use /help to know my abilities [^_^](https://telegra.ph/file/d31755c8e0245be16c4f5.png).
+⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷⊶⊷⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶
+Use /help to know my abilities.
 """
 
 HELP_STRINGS = """
-[Cutie](https://telegra.ph/file/d0441d0d700f54b55c9a1.mp4) at your service.
+Oi baka! you need my help baka?
 I can help you with following functions in managing group.
 
 *Main* commands available:
- • /help: PM's you this message.
- • /help <module name>: PM's you info about that module.
- • /donate: information on how to donate!
- • /settings:
-   • in PM: will send you your settings for all supported modules.
-   • in a group: will redirect you to pm, with all that chat's settings.
+  ⚔️/help: PM's you this message.
+  ⚔️/help <module name>: PM's you info about that module.
+  ⚔️/donate: information on how to donate!
+  ⚔️/settings:
+    ⚔️in PM: will send you your settings for all supported modules.
+    ⚔️in a group: will redirect you to pm, with all that chat's settings.
 
 
 {}
@@ -79,8 +78,8 @@ And the following:
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://telegra.ph/file/d31755c8e0245be16c4f5.png"
-CUTIEPINGIMG = "https://telegra.ph/file/213a05719a33e0e504cf9.gif"
+SAITAMA_IMG = "https://telegra.ph/file/c023f2dba70abbbd20bef.jpg"
+CUTIEPINGIMG = "https://telegra.ph/file/75575850e6fad142c30d9.mp4"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 Cutiepii is hosted on one of Kaizoku's Servers and doesn't require any donations as of now but \
@@ -171,7 +170,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id, HELPABLE[mod].__help__,
                     InlineKeyboardMarkup([[
                         InlineKeyboardButton(
-                            text="Back", callback_data="help_back")
+                            text="バック", callback_data="help_back")
                     ]]))
             elif args[0].lower() == "markdownhelp":
                 IMPORTED["extras"].markdown_help_sender(update)
@@ -203,24 +202,24 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="Add Cutiepii to your group",
+                            text="Add Levi to your group",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                     ],
                      [
                          InlineKeyboardButton(
                              text="Support Chat",
-                             url=f"https://t.me/{SUPPORT_CHAT}"),
+                             url=f"https://t.me/LeviAckermannHelp"),
                          InlineKeyboardButton(
-                             text="Updates Channel",
-                             url="https://t.me/Techno_Ocean")
+                             text="Subs My Ch",
+                             url="https://t.me/Takahashi_help")
                   
                      ]]))
     else:
         update.effective_message.reply_video(
                 CUTIEPINGIMG)
         update.effective_message.reply_text(
-            "Cutie Cutie! \n<b>Queen in command! since:</b> <code>{}</code>".format(uptime),
+            "Nanda? \n<b>Queen in command! since:</b> <code>{}</code>".format(uptime),
             parse_mode=ParseMode.HTML)
                     
 
