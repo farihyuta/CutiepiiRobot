@@ -219,7 +219,7 @@ def start(update: Update, context: CallbackContext):
         update.effective_message.reply_video(
                 CUTIEPINGIMG)
         update.effective_message.reply_text(
-            "Nanda? \n<b>Queen in command! since:</b> <code>{}</code>".format(uptime),
+            "Nanda? \n<b> since:</b> <code>{}</code>".format(uptime),
             parse_mode=ParseMode.HTML)
                     
 
